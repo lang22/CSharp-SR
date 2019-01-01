@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SR模拟动画"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="406.658" Width="623.695">
     <Grid>
-        
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="616"/>
+
     </Grid>
 </Window>
