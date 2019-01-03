@@ -96,5 +96,20 @@
   <ItemGroup>
     <Folder Include="resources\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HYSIQI1S%24}[CPWN%29~[Q65K2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="window.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
