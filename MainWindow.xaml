@@ -1,0 +1,143 @@
+﻿<Window x:Class="SlidingWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:slidingwindow="clr-namespace:SlidingWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="640" Width="1080" FontFamily="Comic Sans MS">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="350*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="1080" Grid.RowSpan="5">
+            <Grid x:Name="grid_animationLayout" Margin="-10,0,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="23*"/>
+                    <ColumnDefinition Width="97*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="531*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="56*"/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <RadialGradientBrush GradientOrigin="0.5,0.2" Center="0.5,0.5" RadiusX="0.7">
+                        <GradientStop Color="#57faff" Offset="0"/>
+                        <GradientStop Color="#FF24315D" Offset="1"/>
+                    </RadialGradientBrush>
+                </Grid.Background>
+
+                <Rectangle Fill="#FF24315D" HorizontalAlignment="Left" Height="66" Margin="50,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="980" Grid.ColumnSpan="2"/>
+                <Image x:Name="R1" HorizontalAlignment="Left" Height="66" Margin="50,25,0,0" VerticalAlignment="Top" Width="66"  Source="resources/Blackball.png"/>
+                <Image x:Name="R2" HorizontalAlignment="Left" Height="66" Margin="116,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png"/>
+                <Image x:Name="R3" HorizontalAlignment="Left" Height="66" Margin="182,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.ColumnSpan="2"/>
+                <Image x:Name="R4" HorizontalAlignment="Left" Height="66" Margin="41,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R5" HorizontalAlignment="Left" Height="66" Margin="107,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R6" HorizontalAlignment="Left" Height="66" Margin="173,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R7" HorizontalAlignment="Left" Height="66" Margin="239,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R8" HorizontalAlignment="Left" Height="66" Margin="305,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R9" HorizontalAlignment="Left" Height="66" Margin="371,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R10" HorizontalAlignment="Left" Height="66" Margin="437,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R11" HorizontalAlignment="Left" Height="66" Margin="503,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R12" HorizontalAlignment="Left" Height="66" Margin="569,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R13" HorizontalAlignment="Left" Height="66" Margin="635,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+                <Image x:Name="R14" HorizontalAlignment="Left" Height="66" Margin="701,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blackball.png" Grid.Column="1"/>
+
+
+
+                <Rectangle Fill="#FF24315D" HorizontalAlignment="Left" Height="66" Margin="50,422,0,0" Stroke="Black" VerticalAlignment="Top" Width="980" Grid.ColumnSpan="2"/>
+                <Image x:Name="S1" HorizontalAlignment="Left" Height="66" Margin="50,422,0,0" VerticalAlignment="Top" Width="66"  Source="resources/Goldenball1.png"/>
+                <Image x:Name="S2" HorizontalAlignment="Left" Height="66" Margin="116,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball2.png"/>
+                <Image x:Name="S3" HorizontalAlignment="Left" Height="66" Margin="182,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball3.png" Grid.ColumnSpan="2"/>
+                <Image x:Name="S4" HorizontalAlignment="Left" Height="66" Margin="41,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball4.png" Grid.Column="1"/>
+                <Image x:Name="S5" HorizontalAlignment="Left" Height="66" Margin="107,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball5.png" Grid.Column="1"/>
+                <Image x:Name="S6" HorizontalAlignment="Left" Height="66" Margin="173,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball6.png" Grid.Column="1"/>
+                <Image x:Name="S7" HorizontalAlignment="Left" Height="66" Margin="239,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball7.png" Grid.Column="1"/>
+                <Image x:Name="S8" HorizontalAlignment="Left" Height="66" Margin="305,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball8.png" Grid.Column="1"/>
+                <Image x:Name="S9" HorizontalAlignment="Left" Height="66" Margin="371,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Goldenball9.png" Grid.Column="1"/>
+                <Image x:Name="S10" HorizontalAlignment="Left" Height="66" Margin="437,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/GoldenballA.png" Grid.Column="1"/>
+                <Image x:Name="S11" HorizontalAlignment="Left" Height="66" Margin="503,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/GoldenballB.png" Grid.Column="1"/>
+                <Image x:Name="S12" HorizontalAlignment="Left" Height="66" Margin="569,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/GoldenballC.png" Grid.Column="1"/>
+                <Image x:Name="S13" HorizontalAlignment="Left" Height="66" Margin="635,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/GoldenballD.png" Grid.Column="1"/>
+                <Image x:Name="S14" HorizontalAlignment="Left" Height="66" Margin="701,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/GoldenballE.png" Grid.Column="1"/>
+
+
+                <Image x:Name="D1" HorizontalAlignment="Left" Height="66" Margin="50,422,0,0" VerticalAlignment="Top" Width="66"  Source="resources/Redball1.png" Opacity="0.0"/>
+                <Image x:Name="D2" HorizontalAlignment="Left" Height="66" Margin="116,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball2.png" Opacity="0.0"/>
+                <Image x:Name="D3" HorizontalAlignment="Left" Height="66" Margin="182,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball3.png" Opacity="0.0" Grid.ColumnSpan="2"/>
+                <Image x:Name="D4" HorizontalAlignment="Left" Height="66" Margin="41,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball4.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D5" HorizontalAlignment="Left" Height="66" Margin="107,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball5.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D6" HorizontalAlignment="Left" Height="66" Margin="173,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball6.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D7" HorizontalAlignment="Left" Height="66" Margin="239,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball7.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D8" HorizontalAlignment="Left" Height="66" Margin="305,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball8.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D9" HorizontalAlignment="Left" Height="66" Margin="371,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Redball9.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D10" HorizontalAlignment="Left" Height="66" Margin="437,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/RedballA.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D11" HorizontalAlignment="Left" Height="66" Margin="503,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/RedballB.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D12" HorizontalAlignment="Left" Height="66" Margin="569,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/RedballC.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D13" HorizontalAlignment="Left" Height="66" Margin="635,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/RedballD.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="D14" HorizontalAlignment="Left" Height="66" Margin="701,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/RedballE.png" Opacity="0.0" Grid.Column="1"/>
+
+                <Image x:Name="L1" HorizontalAlignment="Left" Height="66" Margin="50,422,0,0" VerticalAlignment="Top" Width="66"  Source="resources/Blueball.png" Opacity="0.0"/>
+                <Image x:Name="L2" HorizontalAlignment="Left" Height="66" Margin="116,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0"/>
+                <Image x:Name="L3" HorizontalAlignment="Left" Height="66" Margin="182,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.ColumnSpan="2"/>
+                <Image x:Name="L4" HorizontalAlignment="Left" Height="66" Margin="41,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L5" HorizontalAlignment="Left" Height="66" Margin="107,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L6" HorizontalAlignment="Left" Height="66" Margin="173,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L7" HorizontalAlignment="Left" Height="66" Margin="239,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L8" HorizontalAlignment="Left" Height="66" Margin="305,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L9" HorizontalAlignment="Left" Height="66" Margin="371,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L10" HorizontalAlignment="Left" Height="66" Margin="437,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L11" HorizontalAlignment="Left" Height="66" Margin="503,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L12" HorizontalAlignment="Left" Height="66" Margin="569,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L13" HorizontalAlignment="Left" Height="66" Margin="635,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="L14" HorizontalAlignment="Left" Height="66" Margin="701,422,0,0" VerticalAlignment="Top" Width="66" Source="resources/Blueball.png" Opacity="0.0" Grid.Column="1"/>
+
+                <Image x:Name="Sender" Margin="231,361,185,114" Source="resources/Sender.png" Stretch="Fill" Grid.Column="1"/>
+                <Image x:Name="Receiver" Margin="216,80,200,389" Source="resources/Receiver.png" Stretch="Fill" Grid.Column="1"/>
+                <Image x:Name="SenderWindow" Margin="20,396,736,16" Source="resources/window.jpg" Stretch="Fill" MinWidth="66" Grid.ColumnSpan="2" />
+                <Image x:Name="ReceiverWindow" Margin="20,0,736,418" Source="resources/window.jpg" Stretch="Fill" MinWidth="66" Grid.ColumnSpan="2"/>
+                <Button x:Name="start" Style="{StaticResource BUTTON_AGREE}" Content="START" FontSize="22"  HorizontalAlignment="Left" Margin="437,0,0,0" Width="132"
+                         Background="#FF36B5C1" Click="Start" Grid.Row="1" Grid.Column="1"/>
+
+                <Image x:Name="A1" HorizontalAlignment="Left" Height="66" Margin="50,25,0,0" VerticalAlignment="Top" Width="66"  Source="resources/Whiteball.png" Opacity="0.0"/>
+                <Image x:Name="A2" HorizontalAlignment="Left" Height="66" Margin="116,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0"/>
+                <Image x:Name="A3" HorizontalAlignment="Left" Height="66" Margin="182,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.ColumnSpan="2"/>
+                <Image x:Name="A4" HorizontalAlignment="Left" Height="66" Margin="41,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A5" HorizontalAlignment="Left" Height="66" Margin="107,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A6" HorizontalAlignment="Left" Height="66" Margin="173,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A7" HorizontalAlignment="Left" Height="66" Margin="239,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A8" HorizontalAlignment="Left" Height="66" Margin="305,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A9" HorizontalAlignment="Left" Height="66" Margin="371,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A10" HorizontalAlignment="Left" Height="66" Margin="437,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A11" HorizontalAlignment="Left" Height="66" Margin="503,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A12" HorizontalAlignment="Left" Height="66" Margin="569,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A13" HorizontalAlignment="Left" Height="66" Margin="635,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="A14" HorizontalAlignment="Left" Height="66" Margin="701,25,0,0" VerticalAlignment="Top" Width="66" Source="resources/Whiteball.png" Opacity="0.0" Grid.Column="1"/>
+                <Image x:Name="success" Source="resources/success.png" Opacity="0.0" Stretch="Fill" HorizontalAlignment="Left" Height="106" Margin="173,213,0,0" VerticalAlignment="Top" Width="298" Grid.Column="1"/>
+
+                <Label Content="LOSS" BorderBrush="White" BorderThickness="1" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="22"  HorizontalAlignment="Left" Margin="116,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="53" Width="132" Grid.ColumnSpan="2"/>
+
+
+
+
+                <Label Content="STEPS" BorderBrush="White" BorderThickness="1" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="22"  HorizontalAlignment="Left" Margin="173,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="53" Width="132" Grid.Column="1"/>
+                <Label x:Name="StepsCounter" HorizontalAlignment="Left" Height="53" Margin="305,0,0,0" Grid.Row="1"  Content="{Binding Path=Steps}" FontSize="22" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Background="#FF24315D" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                <Label HorizontalAlignment="Left" Height="53" Margin="85,0,0,0" Grid.Row="1"  Content="%" FontSize="22" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Background="#FF24315D" VerticalAlignment="Top" Width="31" Grid.Column="1"/>
+                <slidingwindow:NumericBox x:Name="LossRate" HorizontalAlignment="Left" Height="53" Margin="41,0,0,0" Grid.Row="1"  Text="0" FontSize="22" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Background="#FF24315D" VerticalAlignment="Top" Width="44" Grid.Column="1"/>
+                <Label x:Name="ShowLoss" Visibility="Hidden" HorizontalAlignment="Left" Height="53" Margin="41,0,0,0" Grid.Row="1"  Content="{Binding Path=Loss}" FontSize="22" Foreground="White" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Background="#FF24315D" VerticalAlignment="Top" Width="44" Grid.Column="1"/>
+                <Button  x:Name="Simulate" Style="{StaticResource BUTTON_AGREE}" Content="Restart" FontSize="22"  HorizontalAlignment="Left" Margin="635,0,0,0" Width="132"
+                    Background="#FF36B5C1" Click="Exit" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,250 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SlidingWindow">
+    <Style x:Key="Window" TargetType="Window">
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+    <Style x:Key="BUTTON_MENUBAR" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Grid Name="g" Opacity="0" Background="LightGray"/>
+                        <Grid Name="grd" RenderTransformOrigin="0.5,0.5" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <!--<RotateTransform x:Name="rotate" Angle="0"-->
+                                    <ScaleTransform x:Name="scale" ScaleX="0.8" ScaleY="0.8"/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                        </Grid>
+                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.2"  Duration="0:0:0.2" Storyboard.TargetName="g" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation To="1"  Duration="0:0:0.2" Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" />
+                                        <DoubleAnimation To="1"  Duration="0:0:0.2" Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0"  Duration="0:0:0.2" Storyboard.TargetName="g" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation To="0.8"  Duration="0:0:0.2" Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" />
+                                        <DoubleAnimation To="0.8"  Duration="0:0:0.2" Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BUTTON_MENUBAR_PATH" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="Gray" />
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Grid Name="g" Background="LightGray" Opacity="0" />
+                        <Grid Name="grd"  Width="22" Height="22" Background="{TemplateBinding Background}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Path Width="10" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Data="M3,10 L7,15 L3,20" Stroke="Gray" StrokeThickness="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.4"  Duration="0:0:0.2" Storyboard.TargetName="g" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="g" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BUTTON_MENUBAR_MINI" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" ClipToBounds="True">
+                        <Border Name="bdr" BorderBrush="LightGray" BorderThickness="2" Opacity="0">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="effect" BlurRadius="20" Opacity="0.8" ShadowDepth="0"  Color="LightGray"/>
+                            </Border.Effect>
+                        </Border>
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="1"  Duration="0:0:0.3" Storyboard.TargetName="bdr" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0"  Duration="0:0:0.3" Storyboard.TargetName="bdr" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    
+    <Style x:Key="BUTTON_AGREE" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="bdr" CornerRadius="3" Opacity="0.5" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                        <!--可使用ContentPresenter代替-->
+                        <!--Foreground的值White可以替换为{TemplateBinding Foreground}-->
+                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" Content="{TemplateBinding Content}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.7"  Duration="0:0:0.2" Storyboard.TargetName="bdr" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.5"  Duration="0:0:0.2" Storyboard.TargetName="bdr"  Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BUTTON_DISAGREE" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="3" BorderBrush="#FFEBEBEB" BorderThickness="1">
+                        <Grid>
+                            <Border Name="bdr" CornerRadius="3" Background="Gray" Opacity="0"/>
+                            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding Content}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.2"  Duration="0:0:0.2" Storyboard.TargetName="bdr" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0"  Duration="0:0:0.2" Storyboard.TargetName="bdr" Storyboard.TargetProperty="Opacity" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <SolidColorBrush x:Key="SOLIDCOLORBRUSH_LIGHT" Color="#FF6FD1FF"/>
+    <Color x:Key="COLOR_LIGHT" R="111" G="209" B="255" A="255" />
+    
+    
+    <Style x:Key="BUTTON_ELLIPSE" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="ToolTip" Value="下一步"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15" Width="30" Height="30" Background="{DynamicResource SOLIDCOLORBRUSH_LIGHT}">
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="effect" BlurRadius="7" Opacity="0.6" ShadowDepth="0"  Color="{DynamicResource COLOR_LIGHT}"/>
+                        </Border.Effect>
+                        <Grid>
+                            <Path Name="path" HorizontalAlignment="Left"  Margin="0,0,0,0" Data="M5,15 L 15,23 L24,9" Stroke="White" StrokeThickness="1"/>
+                            <Path Name="path2" HorizontalAlignment="Left" Opacity="0" Margin="0,0,0,0" Data="M5,15 H25 L17,7 M25,15 L17,22 " Stroke="White" StrokeThickness="1"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.9"  Duration="0:0:0.3" Storyboard.TargetName="effect" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation To="15"  Duration="0:0:0.3" Storyboard.TargetName="effect" Storyboard.TargetProperty="BlurRadius" />
+                                        <DoubleAnimation To="0"  Duration="0:0:0.5" Storyboard.TargetName="path" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation To="1"  Duration="0:0:0.5" BeginTime="0:0:0.3" Storyboard.TargetName="path2" Storyboard.TargetProperty="Opacity" />
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetName="effect" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetName="effect" Storyboard.TargetProperty="BlurRadius" />
+                                        <DoubleAnimation Duration="0:0:0.5" BeginTime="0:0:0.3" Storyboard.TargetName="path" Storyboard.TargetProperty="Opacity" />
+                                        <DoubleAnimation Duration="0:0:0.5" Storyboard.TargetName="path2" Storyboard.TargetProperty="Opacity" />
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>
